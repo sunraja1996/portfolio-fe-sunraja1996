@@ -1,12 +1,6 @@
 import { useState } from "react";
-import {
-  fsdprojects,
-  reactprojects,
-  nodeprojects,
-  javascriptprojects,
-  jsgamesprojects,
-  cssprojects,
-} from "../Resources/fsdprojects";
+import { fsdprojects, reactprojects, nodeprojects, javascriptprojects, jsgamesprojects, cssprojects } from "../Resources/fsdprojects";
+
 
 const Projects = () => {
   // State for toggling sections
@@ -317,9 +311,6 @@ const Projects = () => {
                     <h2 className="text-xl font-bold text-red-700 mb-1">
                       {project.title}
                     </h2>
-                    <p className="text-sm text-gray-600">
-                      {project.description}
-                    </p>
                     <p className="text-lg font-bold text-slate-600 mt-2">
                       Duration taken:  <span className="text-red-400">{project.period}</span>
                     </p>
@@ -381,9 +372,6 @@ const Projects = () => {
                     <h2 className="text-xl font-bold text-red-700 mb-1">
                       {project.title}
                     </h2>
-                    <p className="text-sm text-gray-600">
-                      {project.description}
-                    </p>
                     <p className="text-lg font-bold text-slate-600 mt-2">
                       Duration taken: <span className="text-red-400"> {project.period} </span>
                     </p>
