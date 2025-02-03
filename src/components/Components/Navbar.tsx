@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Dialog,
   DialogPanel,
@@ -24,35 +25,42 @@ import profile from "../Assests/profile.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const handlePortfolio = () => {
+    navigate("/portfolios");
+  };
+
   const projects = [
     {
       name: "Full Stack Development Projects",
       description: "Apps Build with ReactJS, NodeJS, ExpressJS and MongoDB",
-      href: "/projects",
+      href: {handlePortfolio},
       icon: ComputerDesktopIcon,
     },
     {
       name: "Frontend Development Projects",
       description: "Apps Build with ReactJS, MongoDB",
-      href: "/projects",
+      href: {handlePortfolio},
       icon: CodeBracketIcon,
     },
     {
       name: "Backend Development Projects",
       description: "Apps Build with NodeJS, ExpressJS and MongoDB",
-      href: "/projects",
+      href: {handlePortfolio},
       icon: CodeBracketSquareIcon,
     },
     {
       name: "HTML, CSS Projects",
       description: "Apps Build with HTML, CSS",
-      href: "/projects",
+      href: {handlePortfolio},
       icon: CodeBracketIcon,
     },
     {
       name: "HTML, CSS, Javascript Projects",
       description: "Apps Build with HTML, CSS and JavaScript",
-      href: "/projects",
+      href: {handlePortfolio},
       icon: CodeBracketSquareIcon,
     },
   ];
@@ -110,7 +118,7 @@ const Navbar = () => {
                       </div>
                       <div className="flex-auto">
                         <a
-                          href={item.href}
+                          onClick={handlePortfolio}
                           className="block font-semibold text-gray-900"
                         >
                           {item.name}
@@ -182,7 +190,7 @@ const Navbar = () => {
                         <DisclosureButton
                           key={item.name}
                           as="a"
-                          href={item.href}
+                          onClick={handlePortfolio}
                           className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
                         >
                           {item.name}
