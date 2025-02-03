@@ -19,7 +19,6 @@ import {
   CodeBracketIcon,
   CodeBracketSquareIcon,
   ArrowDownCircleIcon,
-  EnvelopeIcon,
 } from "@heroicons/react/20/solid";
 import profile from "../Assests/profile.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
