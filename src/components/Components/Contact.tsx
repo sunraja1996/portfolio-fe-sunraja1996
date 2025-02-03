@@ -56,7 +56,7 @@ const Contact = () => {
       });
   
       if (response.status === 200) {
-        toast.success('Email sent successfully!'); 
+        toast.success(`Thank you, ${formData.name}, for reaching out. I have received your inquiry regarding the job description and will respond to you shortly.`); 
         handleClear(); 
       } else {
         toast.error('Error sending email: ' + response.data.message); 
